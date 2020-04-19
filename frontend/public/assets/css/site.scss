@@ -49,6 +49,8 @@ table {
 
 /* FINISH RESET */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poiret+One&family=Staatliches&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -56,7 +58,7 @@ table {
 html, body {
   height: 100%;
   background-color: $light;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -83,4 +85,93 @@ main {
 .full-page {
   @include page;
   height: 100%;
+}
+
+// Form Styles
+
+form section {
+  margin-bottom: 15px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: "Staatliches", serif;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+  }
+}
+
+input, textarea, button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  display: block;
+  border-radius: 16px;
+  border: 0;
+  resize: none;
+  min-height: 30px;
+  height: 30px;
+  max-height: 30px;
+  position: relative;
+  transition: top 200ms;
+  top: 0;
+  @include smooth-shadow;
+  padding: 0 10px;
+  margin: 5px 0 10px 0;
+
+  &.invalid {
+    $iconsize: 19px;
+    border: 1px solid $ctacolour;
+    background-image: url("/assets/images/1x/exlamation-mark.png");
+    background-repeat: no-repeat;
+    background-position: right ((30px - $iconsize) / 2) top ((30px - $iconsize) / 2);
+    background-size: $iconsize $iconsize;
+  }
+
+  &:focus{
+    border: 1px solid $colour2;
+    outline: none;
+    @include raise;
+
+    &.invalid {
+      border: 1px solid $ctacolour;
+    }
+  }
+}
+
+input, textarea {
+  width: 100%;
+}
+
+textarea {
+  padding-top: 2px;
+  min-height: 260px;
+}
+
+button {
+  background: $ctacolour;
+  color: $light;
+  margin: 0 auto;
+  min-width: 100px;
+  min-height: 35px;
+  font-weight: 900;
+  border: 0;
+  transition: background-color 200ms;
+
+  &:focus {
+    top: -2px;
+    border: 0;
+    background: darken($ctacolour, 5);
+  }
+
+  &:hover {
+    background: darken($ctacolour, 5);
+  }
+}
+
+.form-validation {
+  display: block;
+  min-height: 16px;
+  font-size: small;
+  color: darkgoldenrod;
 }

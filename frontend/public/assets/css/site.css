@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poiret+One&family=Staatliches&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,7 +59,7 @@ table {
 html, body {
   height: 100%;
   background-color: #F2F2F2;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -78,6 +79,86 @@ main {
   min-width: 320px;
   padding: 24px;
   height: 100%;
+}
+
+form section {
+  margin-bottom: 15px;
+}
+form section h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Staatliches", serif;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  font-size: 1.5em;
+}
+
+input, textarea, button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  display: block;
+  border-radius: 16px;
+  border: 0;
+  resize: none;
+  min-height: 30px;
+  height: 30px;
+  max-height: 30px;
+  position: relative;
+  transition: top 200ms;
+  top: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  margin: 5px 0 10px 0;
+}
+input.invalid, textarea.invalid, button.invalid {
+  border: 1px solid #ff8800;
+  background-image: url("/assets/images/1x/exlamation-mark.png");
+  background-repeat: no-repeat;
+  background-position: right 5.5px top 5.5px;
+  background-size: 19px 19px;
+}
+input:focus, textarea:focus, button:focus {
+  border: 1px solid #838C61;
+  outline: none;
+  top: -2px;
+}
+input:focus.invalid, textarea:focus.invalid, button:focus.invalid {
+  border: 1px solid #ff8800;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+textarea {
+  padding-top: 2px;
+  min-height: 260px;
+}
+
+button {
+  background: #ff8800;
+  color: #F2F2F2;
+  margin: 0 auto;
+  min-width: 100px;
+  min-height: 35px;
+  font-weight: 900;
+  border: 0;
+  transition: background-color 200ms;
+}
+button:focus {
+  top: -2px;
+  border: 0;
+  background: #e67a00;
+}
+button:hover {
+  background: #e67a00;
+}
+
+.form-validation {
+  display: block;
+  min-height: 16px;
+  font-size: small;
+  color: darkgoldenrod;
 }
 
 /*# sourceMappingURL=site.css.map */

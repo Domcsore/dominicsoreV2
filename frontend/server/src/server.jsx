@@ -11,7 +11,6 @@ const port = conf.get('Port');
 import ContactForm from '../../src/apps/ContactForm.jsx';
 
 app.use("/assets", express.static(path.join(__dirname, '../../public/assets')));
-
 app.use("/", express.static(path.join(__dirname, '../../public/root')));
 
 app.get("/", (req, res) => {
@@ -27,5 +26,11 @@ app.get("/", (req, res) => {
     })
 });
 
+app.use("/api", express.json());
+app.post("/api/sendenquiry", (req, res) => {
+    console.log(req.body);
+    res.send();
+});
+
 console.log(`listening on port ${port}`);
-app.listen(port);
+let server = app.listen(port);
