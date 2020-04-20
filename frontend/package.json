@@ -9,6 +9,7 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "mini-css-extract-plugin": "^0.9.0",
+    "nodemailer": "^6.4.6",
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {},

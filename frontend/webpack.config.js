@@ -1,4 +1,5 @@
 const nodeExternals = require('webpack-node-externals');
+const webpack = require("webpack");
 
 const clientConfig = {
     target: 'web',
@@ -55,7 +56,10 @@ const serverConfig = {
         global: false,
         __filename: false,
         __dirname: false
-    }
+    },
+    plugins: [
+        new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true})
+    ]
 };
 
 module.exports = [clientConfig, serverConfig];

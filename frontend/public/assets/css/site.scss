@@ -56,7 +56,7 @@ table {
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   background-color: $light;
   font-size: 14px;
 }
@@ -67,10 +67,6 @@ body {
 
 h2{
 
-}
-
-main {
-  height: 100%;
 }
 
 @mixin page {
@@ -84,7 +80,7 @@ main {
 
 .full-page {
   @include page;
-  height: 100%;
+  height: 96vh;
 }
 
 // Form Styles
@@ -152,11 +148,14 @@ button {
   background: $ctacolour;
   color: $light;
   margin: 0 auto;
+  min-height: 36px;
   min-width: 100px;
-  min-height: 35px;
   font-weight: 900;
   border: 0;
-  transition: background-color 200ms;
+  transition: background-color 200ms, top 200ms, min-width 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:focus {
     top: -2px;
@@ -167,6 +166,12 @@ button {
   &:hover {
     background: darken($ctacolour, 5);
   }
+
+  &.success {
+    background: lime;
+    min-width: 36px;
+    width: 36px;
+  }
 }
 
 .form-validation {
@@ -174,4 +179,28 @@ button {
   min-height: 16px;
   font-size: small;
   color: darkgoldenrod;
+}
+
+.alert-box{
+  display: flex;
+  margin-top: 15px;
+
+  .alert-icon-container {
+    margin-right: 5px;
+
+    .alert-icon {
+      max-width: 18px;
+    }
+  }
+}
+
+footer {
+  background: $light;
+  color: $dark;
+
+  p {
+    text-align: right;
+    padding: 10px;
+    font-size: 11px;
+  }
 }

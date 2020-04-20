@@ -57,17 +57,13 @@ table {
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   background-color: #F2F2F2;
   font-size: 14px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-}
-
-main {
-  height: 100%;
 }
 
 .page {
@@ -78,7 +74,7 @@ main {
 .full-page {
   min-width: 320px;
   padding: 24px;
-  height: 100%;
+  height: 96vh;
 }
 
 form section {
@@ -139,11 +135,14 @@ button {
   background: #ff8800;
   color: #F2F2F2;
   margin: 0 auto;
+  min-height: 36px;
   min-width: 100px;
-  min-height: 35px;
   font-weight: 900;
   border: 0;
-  transition: background-color 200ms;
+  transition: background-color 200ms, top 200ms, min-width 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 button:focus {
   top: -2px;
@@ -153,12 +152,38 @@ button:focus {
 button:hover {
   background: #e67a00;
 }
+button.success {
+  background: lime;
+  min-width: 36px;
+  width: 36px;
+}
 
 .form-validation {
   display: block;
   min-height: 16px;
   font-size: small;
   color: darkgoldenrod;
+}
+
+.alert-box {
+  display: flex;
+  margin-top: 15px;
+}
+.alert-box .alert-icon-container {
+  margin-right: 5px;
+}
+.alert-box .alert-icon-container .alert-icon {
+  max-width: 18px;
+}
+
+footer {
+  background: #F2F2F2;
+  color: #A6A6A6;
+}
+footer p {
+  text-align: right;
+  padding: 10px;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=site.css.map */
