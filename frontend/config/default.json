@@ -1,9 +1,9 @@
 {
   "Port": 6593,
   "Mail": {
-    "Host": "mg.dominicsore.com",
+    "Host": "mail.example.com",
     "Port": 587,
-    "User": "enquiries",
-    "Pass": "testpassword"
+    "User": "myuser",
+    "Pass": "mypass"
   }
 }

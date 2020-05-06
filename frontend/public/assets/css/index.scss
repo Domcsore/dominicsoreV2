@@ -6,34 +6,6 @@
   align-items: center;
   justify-content: center;
 
-  & #top-graphics {
-    position: absolute;
-    top: 80%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-
-    & div {
-      height: 100%;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 50%;
-
-      &:nth-child(1) {
-        background-color: $colour1;
-      }
-
-      &:nth-child(2) {
-        background-color: $colour2;
-      }
-
-      &:nth-child(3) {
-        background-color: $colour3;
-      }
-    }
-  }
-
   & #landing-content {
     margin-top: auto;
     position: relative;
@@ -42,14 +14,13 @@
       display: block;
       position: relative;
       border-radius: 50%;
-      max-width: 150px;
       margin: auto;
       @include float-in-animation;
       opacity: 1;
     }
 
     & h1 {
-      margin: 20px 0 0 0;
+      margin: 0.6rem 0 0 0;
       text-align: center;
       position: relative;
       @include float-in-animation;
@@ -61,24 +32,33 @@
     }
 
     & #landing-description {
+      margin: 0.6rem 0 0 0;
       position: relative;
-      $height: 44px;
+      $height: 2rem;
       text-align: center;
       height: $height;
       overflow: hidden;
 
       & h2 {
+        font-size: 1.5rem;
         font-family: "Staatliches", serif;
-        letter-spacing: 0.19em;
-        margin: 20px 0;
-        $shift-amount: 30 + 19.92px;
+        letter-spacing: 0.19rem;
+        margin: 1rem 0;
+        $shift-amount: 2.5rem;
         position: relative;
-        top: -$shift-amount * 3;
+        top: -(($shift-amount * 3) + 1rem);
         animation-name: roll-description;
         animation-duration: 4s;
         animation-delay: 600ms;
         animation-fill-mode: forwards;
         animation-timing-function: cubic-bezier(1, 0, 0, 1);
+
+        @keyframes roll-description {
+          0% {top: -(($shift-amount * 3) + 1rem)}
+          33% {top: -(($shift-amount) * 2 + 1rem)}
+          66% {top: -(($shift-amount) + 1rem)}
+          100% {top: -1rem}
+        }
       }
     }
   }
@@ -119,7 +99,7 @@
 
       & svg {
         display: inline-block;
-        width: 24px;
+        width: 1.8rem;
         fill: $colour3;
       }
     }
@@ -138,14 +118,6 @@
   }
 }
 
-@keyframes roll-description {
-  $shift-amount: 27 + 19.92px;
-  0% {top: -$shift-amount * 3}
-  33% {top: -$shift-amount * 2}
-  66% {top: -$shift-amount}
-  100% {top: 0}
-}
-
 #portfolio-content {
   background-color: $colour2;
   display: flex;
@@ -156,6 +128,10 @@
 
   img {
     max-width: 100px;
+  }
+
+  svg {
+    width: 8rem;
   }
 }
 
@@ -168,11 +144,14 @@
 
   #contact-app {
     width: 100%;
-  }
-}
+    max-width: 400px;
 
-@media screen and (min-width: 320px){
-  #contact-app {
-    max-width: 320px;
+    @include medmq{
+      max-width: 600px;
+    }
+
+    @include bigmq{
+      max-width: 1000px;
+    }
   }
 }
