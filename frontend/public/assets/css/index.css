@@ -159,12 +159,12 @@
   width: 100%;
   max-width: 400px;
 }
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 2000px) {
   #contact-content #contact-app {
     max-width: 600px;
   }
 }
-@media screen and (min-width: 2500px) {
+@media screen and (min-width: 3500px) {
   #contact-content #contact-app {
     max-width: 1000px;
   }

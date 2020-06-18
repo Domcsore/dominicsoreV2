@@ -121,11 +121,11 @@ input, textarea, button {
   top: 0;
   @include smooth-shadow;
   padding: 0 0.4em;
-  margin: 0.4em 0 0.6em 0;
+  margin: 0.4em 0 1.5em 0;
   width: 100%;
 
   &.invalid {
-    $iconsize: 1.6rem;
+    $iconsize: 1rem;
     border: 1px solid $ctacolour;
     background-image: url("/assets/images/1x/exlamation-mark.png");
     background-repeat: no-repeat;
@@ -157,7 +157,6 @@ button {
   background: $ctacolour;
   color: $light;
   margin: 1em auto 0 auto;
-  min-height: 1.8em;
   min-width: 100px;
   font-weight: 900;
   border: 0;
@@ -165,6 +164,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: inherit;
 
   &:focus {
     top: -2px;

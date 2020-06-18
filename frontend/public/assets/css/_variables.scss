@@ -37,13 +37,13 @@ $ctacolour: #ff8800;
 }
 
 @mixin medmq {
-  @media screen and (min-width: 1800px) {
+  @media screen and (min-width: 2000px) {
     @content
   }
 }
 
 @mixin bigmq {
-  @media screen and (min-width: 2500px) {
+  @media screen and (min-width: 3500px) {
     @content
   }
 }

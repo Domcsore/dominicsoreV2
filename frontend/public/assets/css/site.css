@@ -61,12 +61,12 @@ html, body {
   background-color: #F2F2F2;
   font-size: 14px;
 }
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 2000px) {
   html, body {
     font-size: 30px;
   }
 }
-@media screen and (min-width: 2500px) {
+@media screen and (min-width: 3500px) {
   html, body {
     font-size: 50px;
   }
@@ -114,15 +114,15 @@ input, textarea, button {
   top: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
   padding: 0 0.4em;
-  margin: 0.4em 0 0.6em 0;
+  margin: 0.4em 0 1.5em 0;
   width: 100%;
 }
 input.invalid, textarea.invalid, button.invalid {
   border: 1px solid #ff8800;
   background-image: url("/assets/images/1x/exlamation-mark.png");
   background-repeat: no-repeat;
-  background-position: right 0.2rem top 0.1rem;
-  background-size: 1.6rem 1.6rem;
+  background-position: right 0.2rem top 0.4rem;
+  background-size: 1rem 1rem;
 }
 input:focus, textarea:focus, button:focus {
   border: 1px solid #838C61;
@@ -146,7 +146,6 @@ button {
   background: #ff8800;
   color: #F2F2F2;
   margin: 1em auto 0 auto;
-  min-height: 1.8em;
   min-width: 100px;
   font-weight: 900;
   border: 0;
@@ -154,6 +153,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: inherit;
 }
 button:focus {
   top: -2px;
