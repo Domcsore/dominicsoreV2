@@ -6,8 +6,14 @@
   align-items: center;
   justify-content: center;
 
+  #landing-content-container {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   & #landing-content {
-    margin-top: auto;
     position: relative;
 
     & img {
@@ -66,7 +72,6 @@
   & #landing-socials {
     position: relative;
     align-self: flex-end;
-    margin-top: auto;
 
     & a {
       position: relative;
@@ -100,6 +105,7 @@
       & svg {
         display: inline-block;
         width: 1.8rem;
+        height: 1.8rem;
         fill: $colour3;
       }
     }
@@ -131,6 +137,7 @@
   }
 
   svg {
+    height: 4rem;
     width: 8rem;
   }
 }
