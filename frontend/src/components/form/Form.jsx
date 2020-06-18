@@ -1,5 +1,6 @@
 import React from 'react';
 import { formStates } from "./formstates.js";
+import {fetch} from "whatwg-fetch";
 
 function Form(props) {
     const [formValues, setFormValues] = React.useState({});
